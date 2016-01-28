@@ -1,5 +1,5 @@
-var TemplateTracker = {
-  track : function (templateId) {
+var TemplateTracker = function() {
+  var track = function(templateId) {
     var type = RiseVision.Common.Utilities.getQueryParameter("type");
 
     if (type === "display") {
