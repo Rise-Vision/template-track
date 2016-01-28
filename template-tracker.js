@@ -15,3 +15,7 @@ var TemplateTracker = function() {
     }
   }
 }
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = TemplateTracker;
+}
