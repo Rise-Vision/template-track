@@ -2,7 +2,7 @@
 
 ## Introduction
 
-*A JS An js script for tracking templates sending the data to BQ*
+*A JS script for tracking templates sending the data to BQ*
 
 Project Name works in conjunction with [Rise Vision](http://www.risevision.com), the [digital signage management application](http://rva.risevision.com/) that runs on [Google Cloud](https://cloud.google.com).
 
@@ -11,10 +11,24 @@ At this time Chrome is the only browser that this project and Rise Vision suppor
 ## Built With
 - *JavaScript*
 
-## Development
+## Usage
+To use the tracker you have to insert the following script into the head section of the template html passing the presentation id to track function.
 
-### Dependencies
-*include and describe all dependencies*
+```javascript
+<script>
+  (function() {
+    var script = document.createElement('script');
+    script.onload = function() {
+      window.onload = function() {
+        TemplateTracker.track("EVENT","PRESENTATION_ID");
+      };
+    };
+    script.src = 'https://cdn.rawgit.com/Rise-Vision/template-tracker/master/template-tracker-loader.js?v='+parseInt(Math.random()*99999999);;
+    document.head.appendChild(script);
+  })();
+</script>
+```
+
 
 ## Submitting Issues
 If you encounter problems or find defects we really want to hear about them. If you could take the time to add them as issues to this Repository it would be most appreciated. When reporting issues please use the following format where applicable:
