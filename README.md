@@ -20,7 +20,7 @@ To use the tracker you have to insert the following script into the head section
     var script = document.createElement('script');
     script.onload = function() {
       window.onload = function() {
-        TemplateTracker.track("EVENT","PRESENTATION_ID");
+        TemplateTracker.track("EVENT","TEMPLATE_ID","TEMPLATE_NAME");
       };
     };
     script.src = 'https://cdn.rawgit.com/Rise-Vision/template-tracker/master/template-tracker-loader.js?v='+parseInt(Math.random()*99999999);;
